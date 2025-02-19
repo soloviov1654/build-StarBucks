@@ -125,6 +125,12 @@ h2 {
 .footer {
   padding: 36px 0;
   margin-top: auto;
+  background-color: #0B0C0D;
+  overflow: hidden;
+}
+.footer .container {
+  z-index: 1;
+  position: relative;
 }
 .footer-row, .footer-contacts {
   display: flex;
@@ -132,12 +138,40 @@ h2 {
 .footer-row {
   margin-bottom: 84px;
 }
+.footer-logo {
+  position: relative;
+}
+.footer-logo:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: 371px;
+  height: 260px;
+  background-image: url(./assets/img/shadow-phone.png);
+}
 .footer-nav {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   max-width: 761px;
   width: 100%;
+  position: relative;
+}
+.footer-nav:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: 1273px;
+  height: 923px;
+  background-image: url(./assets/img/shadow-lg.png);
 }
 .footer-nav__column {
   padding: 0 12px;
@@ -163,9 +197,6 @@ h2 {
   margin-bottom: 8px;
   text-decoration: none;
 }
-.footer-social {
-  margin-left: auto;
-}
 .footer__phones {
   display: flex;
   gap: 24px;
@@ -176,6 +207,35 @@ h2 {
   font-weight: 600;
   text-decoration: none;
   font-style: normal;
+  position: relative;
+}
+.footer__phones-item:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: 371px;
+  height: 260px;
+  background-image: url(./assets/img/shadow-phone.png);
+}
+.footer-social {
+  margin-left: auto;
+  position: relative;
+}
+.footer-social__item:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: 168px;
+  height: 153px;
+  background-image: url(./assets/img/shadow-sm.png);
 }
 
 @media (min-width: 1025px) {
@@ -228,6 +288,37 @@ h2 {
     display: block;
     transform: translate(0, 0);
     visibility: visible;
+  }
+  footer .footer {
+    padding: 37px 0 7px;
+  }
+  footer .footer-logo {
+    max-width: 135px;
+  }
+  footer .footer-nav {
+    order: 1;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    padding: 35px 10px;
+  }
+  footer .footer-nav__title, footer .footer-nav__link {
+    font-size: 16px;
+  }
+  footer .footer-row {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  footer .footer__phones-item {
+    font-size: 16px;
+  }
+  footer .footer-social {
+    height: 34px;
+    width: 34px;
+  }
+  footer .btn {
+    margin-left: auto;
   }
 }
 * {
