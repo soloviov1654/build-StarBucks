@@ -146,13 +146,34 @@ header .btn-burger {
   opacity: 0;
 }
 
+.first-banner {
+  margin-bottom: 100px;
+}
 .first-banner .container {
   display: flex;
   gap: 24px;
+  justify-content: space-between;
 }
 
 .banner-information {
   max-width: 574px;
+}
+.banner-information .main-text {
+  position: relative;
+}
+.banner-information .main-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: 586px;
+  height: 653px;
+  background-image: url(./assets/img/shadow-green-big.svg);
+  top: 150px;
+  left: 200px;
 }
 
 .banner-description {
@@ -165,6 +186,76 @@ header .btn-burger {
   display: flex;
   gap: 16px;
   align-items: center;
+  margin-bottom: 54px;
+}
+
+.statistic-list {
+  display: flex;
+  gap: 46px;
+}
+.statistic__item {
+  max-width: 126px;
+}
+.statistic__title {
+  font-size: 62px;
+}
+.statistic__subtitle {
+  font-size: 20px;
+}
+
+.cup-side {
+  margin-right: 43px;
+  position: relative;
+}
+.cup-side::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: 479px;
+  height: 479px;
+  background-image: url(./assets/img/cup-shadow-white.png);
+  top: 125px;
+  left: 75px;
+}
+.cup-side::after {
+  content: "";
+  position: absolute;
+  background: center/contain no-repeat;
+  z-index: -1;
+  width: 700px;
+  height: 700px;
+  background-image: url(./assets/img/cup-shadow-green.png);
+  right: -190px;
+  bottom: -200px;
+}
+
+.cup-discount {
+  font-size: 54px;
+  font-weight: 500;
+  position: absolute;
+  width: 183px;
+  height: 183px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  top: 0;
+  right: 38px;
+  background: url(./assets/img/sale-big.svg) center no-repeat;
+}
+
+.advantages-row {
+  padding: 50px 78px 36px;
+  border-radius: 46px;
+  background: linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+  height: 372px;
+  margin-bottom: 100px;
 }
 
 .footer {
