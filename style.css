@@ -182,6 +182,15 @@ header .btn-burger {
   margin-bottom: 54px;
 }
 
+.banner-line {
+  width: 1102px;
+  height: 677px;
+  position: absolute;
+  top: 200px;
+  right: -470px;
+  z-index: -1;
+}
+
 .btn-group {
   display: flex;
   gap: 16px;
@@ -234,20 +243,38 @@ header .btn-burger {
 }
 
 .cup-discount {
-  font-size: 54px;
-  font-weight: 500;
-  position: absolute;
-  width: 183px;
-  height: 183px;
+  --max-size: 184px;
+  --size: 14.154vw;
+  width: var(--size);
+  height: var(--size);
+  max-width: var(--max-size);
+  max-height: var(--max-size);
+  background: url(./assets/img/sale-big.svg) center/100% no-repeat;
   border-radius: 50%;
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  color: white;
+  text-align: center;
+  color: #fff;
+  font-size: 55px;
+  font-size: min(4.231vw, 55px);
+  font-weight: 500;
+  position: absolute;
   top: 0;
   right: 38px;
-  background: url(./assets/img/sale-big.svg) center no-repeat;
+  z-index: 1;
+}
+.cup-discount:before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 42px);
+  height: calc(100% - 42px);
+  box-shadow: -4.56px 15.52px 26.48px rgba(20, 62, 40, 0.4784313725);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .advantages-row {
@@ -374,12 +401,12 @@ header .btn-burger {
   background-image: url(./assets/img/shadow-sm.png);
 }
 
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025.99px) {
   .btn-burger {
     display: none;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024.99px) {
   header {
     padding: 34px 0;
   }
@@ -425,6 +452,10 @@ header .btn-burger {
     transform: translate(0, 0);
     visibility: visible;
   }
+  .first-banner .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   footer .footer {
     padding: 37px 0 7px;
   }
@@ -457,6 +488,46 @@ header .btn-burger {
     margin-left: auto;
   }
 }
+@media screen and (max-width: 767.99px) {
+  .main-text {
+    font-size: 48px;
+    margin-bottom: 36px;
+  }
+  .first-banner .banner-description {
+    font-size: 12px;
+    margin-bottom: 36px;
+    max-width: 352px;
+  }
+  .statistic__title {
+    font-size: 42px;
+  }
+  .statistic__subtitle {
+    font-size: 12px;
+  }
+  .btn-group {
+    margin-bottom: 36px;
+  }
+  .btn-group .btn-primary {
+    font-size: 16px;
+    padding: 14px 54px;
+  }
+  .btn-group .btn-secondary {
+    font-size: 16px;
+    padding: 14px 54px;
+  }
+  div.cup-side {
+    padding: 0 64px;
+    margin-right: 0;
+  }
+  .banner-line {
+    width: 110%;
+    top: -43px;
+    right: -62px;
+  }
+  .cup-discount {
+    right: 100px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -469,6 +540,7 @@ html {
   background-color: #121517;
   color: #d9d9d9;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
