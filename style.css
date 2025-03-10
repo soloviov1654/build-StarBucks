@@ -264,25 +264,95 @@ header .btn-burger {
   right: 38px;
   z-index: 1;
 }
-.cup-discount:before {
-  content: "";
-  position: absolute;
-  width: calc(100% - 42px);
-  height: calc(100% - 42px);
-  box-shadow: -4.56px 15.52px 26.48px rgba(20, 62, 40, 0.4784313725);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -1;
+
+.advantages > .container {
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-.advantages-row {
+.advantage-row {
   padding: 50px 78px 36px;
   border-radius: 46px;
   background: linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+  max-width: 1029px;
   height: 372px;
   margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 120px;
+  z-index: -1;
+}
+.advantage-row:before {
+  --size: 750px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: var(--size);
+  height: var(--size);
+  background: url(./assets/img/adv-green.png) center no-repeat;
+  left: 150px;
+  top: 170px;
+}
+.advantage-row:after {
+  --size: 600px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: var(--size);
+  height: var(--size);
+  background: url(./assets/img/adv-white.png) center no-repeat;
+  left: 85%;
+  top: 65%;
+}
+.advantage-row .cup-discount {
+  top: -70px;
+  left: 15px;
+}
+
+.advantage {
+  max-width: 228px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advantage_img-wrapper {
+  position: relative;
+  --size: 148px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.39);
+  margin: 12px;
+  background-image: linear-gradient(245deg, #237249 0%, #35C66B 100%);
+}
+.advantage_img-wrapper img {
+  max-width: 220px;
+  max-height: 220px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.advantage_title {
+  color: #121517;
+  font-weight: 500;
+  z-index: 1;
+}
+.advantage_sub {
+  color: #292C2E;
+  font-weight: 400;
 }
 
 .footer {
@@ -430,7 +500,7 @@ header .btn-burger {
     max-width: 114px;
   }
   .menu__list {
-    gap: 48px;
+    gap: 25px;
     flex-direction: column;
   }
   .mobile-container {
@@ -439,15 +509,16 @@ header .btn-burger {
     top: 0;
     width: 100%;
     background: #0B0C0D;
-    padding: 25px 25px 75px;
+    padding: 20px 25px 25px;
     background-image: linear-gradient(245deg, rgba(35, 114, 73, 0.32) 0%, rgba(53, 198, 107, 0.32) 52%);
     backdrop-filter: blur(3px);
     transition: 0.3s;
     visibility: hidden;
     transform: translate(0, -100%);
+    z-index: 2;
   }
   .mobile-container.show {
-    top: 97px;
+    top: 80px;
     display: block;
     transform: translate(0, 0);
     visibility: visible;
