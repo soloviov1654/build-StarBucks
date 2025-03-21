@@ -471,6 +471,7 @@ header .btn-burger {
   height: 0;
   width: 0;
   transition: 0.3s;
+  cursor: pointer;
 }
 .overlay.show {
   height: 100vh;
@@ -498,6 +499,44 @@ header .btn-burger {
   opacity: 1;
   visibility: visible;
 }
+.modal svg {
+  height: 40px;
+  width: 48px;
+}
+.modal .btn-player {
+  padding: 5px;
+  margin: 5px;
+  height: 50px;
+  width: 55px;
+  cursor: pointer;
+}
+.modal .player-elements {
+  display: flex;
+  flex-direction: row;
+}
+.modal .player-elements use {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.drinks-row {
+  margin-left: 50px;
+  display: flex;
+}
+.drinks-row .btn-player {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.model-btn-row {
+  display: flex;
+}
 
 .modal-content {
   margin-bottom: 24px;
@@ -513,6 +552,7 @@ button.accept {
   color: white;
   box-shadow: 0px 6px 18px -5px rgb(237, 103, 85);
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .footer {
