@@ -490,6 +490,8 @@ header .btn-burger {
   transition: 0.3s;
   background-color: #fffde7;
   color: black;
+  width: 90%;
+  max-width: 1300px;
   border: 1px solid #ccc;
   transition: 0.5s ease-out;
   box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
@@ -520,6 +522,26 @@ header .btn-burger {
   text-align: center;
   align-items: center;
 }
+.modal video {
+  width: 100%;
+  max-height: 70vh;
+}
+.modal .close_btn {
+  display: block;
+  margin-left: auto;
+  width: 40px;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 450px;
+  font-weight: 700;
+  height: 40px;
+}
+.modal-content {
+  margin-bottom: 24px;
+  color: black;
+  font-size: 36px;
+  font-weight: 600;
+}
 
 .drinks-row {
   margin-left: 50px;
@@ -536,10 +558,6 @@ header .btn-burger {
 
 .model-btn-row {
   display: flex;
-}
-
-.modal-content {
-  margin-bottom: 24px;
 }
 
 button.accept {
@@ -857,6 +875,16 @@ button.accept {
   }
   .advantage_sub {
     font-size: 12px;
+  }
+  .model-btn-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .drinks-row {
+    margin: 0 auto;
+  }
+  .player-elements {
+    margin: 0 auto;
   }
 }
 * {
