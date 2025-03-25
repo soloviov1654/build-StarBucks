@@ -451,13 +451,17 @@ header .btn-burger {
   gap: 10px;
 }
 
+.line-wrapper {
+  position: relative;
+}
+
 .we-make__line {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  top: 200px;
   width: 993px;
   height: 999px;
-  display: none;
+  z-index: -5;
+  left: 400px;
 }
 
 .overlay {
@@ -571,6 +575,83 @@ button.accept {
   box-shadow: 0px 6px 18px -5px rgb(237, 103, 85);
   cursor: pointer;
   margin-bottom: 10px;
+}
+
+.products .container {
+  margin-bottom: 100px;
+}
+.products-content {
+  display: flex;
+  gap: 72px;
+  margin-bottom: 47px;
+}
+.products h1 {
+  max-width: 392px;
+}
+.products .banner-description {
+  max-width: 444px;
+  margin-top: 17px;
+  line-height: 163%;
+  letter-spacing: -0.02em;
+}
+.products .swiper-slide {
+  max-width: 277px;
+  border: 1px solid #d9d9d9;
+  border-radius: 29px;
+  text-align: center;
+  padding: 54px 30px 33px;
+}
+.products .swiper-slide img {
+  max-width: 180px;
+  max-height: 240px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.products .coffee-img {
+  position: relative;
+  margin-bottom: 31px;
+  --size: 186px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.39);
+  background-image: linear-gradient(245deg, #237249 0%, #35C66B 100%);
+}
+.products .coffee-values {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 30px;
+}
+.products .coffee-title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.products .coffee-descr {
+  font-size: 20px;
+  line-height: 163%;
+  letter-spacing: -0.02em;
+  margin-bottom: 7px;
+}
+.products .coffee-price {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 163%;
+  letter-spacing: -0.02em;
+}
+.products .coffee-ml {
+  font-size: 20px;
+  line-height: 163%;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: end;
+}
+.products .btn {
+  font-size: 17px;
+  padding: 15px 40px;
 }
 
 .footer {
@@ -805,6 +886,30 @@ button.accept {
   }
   .advantage_sub {
     font-size: 16px;
+  }
+  .we-make > .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .we-make .img-side .cup-discount {
+    right: 130px;
+    top: 130px;
+  }
+  .we-make .img-side .img-wrapper {
+    margin-left: 50px;
+  }
+  .we-make .img-side .img-wrapper::after {
+    left: 22%;
+    top: 53%;
+  }
+  .we-make__line {
+    top: -168px;
+    left: -92px;
+    width: 1100px;
+    height: 1100px;
+  }
+  .content-side {
+    margin-left: 23px;
   }
 }
 @media screen and (max-width: 767.99px) {
