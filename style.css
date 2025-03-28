@@ -609,6 +609,9 @@ button.accept {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.products .swiper-slide-active {
+  border: 1px solid #35C66B;
+}
 .products .coffee-img {
   position: relative;
   margin-bottom: 31px;
@@ -652,6 +655,19 @@ button.accept {
 .products .btn {
   font-size: 17px;
   padding: 15px 40px;
+}
+.products .caroucell-wrapper {
+  position: relative;
+}
+.products .caroucell-wrapper .swiper {
+  max-width: 1252px;
+  margin: 0 auto;
+}
+.products .caroucell-wrapper .swiper-button-prev {
+  left: -120px;
+}
+.products .caroucell-wrapper .swiper-button-next {
+  right: -120px;
 }
 
 .footer {
@@ -1175,6 +1191,17 @@ img {
 }
 .btn.btn-secondary:hover::after {
   animation: 0.3s btn-secondary 1;
+}
+
+.swiper-button-prev.btn-outline, .swiper-button-next.btn-outline {
+  transform: rotate(90deg);
+}
+.swiper-button-prev.btn-outline::after, .swiper-button-next.btn-outline::after {
+  content: "";
+}
+
+.swiper-button-prev.btn-outline {
+  transform: rotate(-90deg);
 }
 
 .svg-sprite {
