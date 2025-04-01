@@ -130,20 +130,9 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 24,
-        },
-        1026: {
-          slidesPerView: 2,
-          spaceBetween: 48,
-        },
-        1233: {
-          slidesPerView: 3,
-          spaceBetween: 48,
-        },       
+     
         1560: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 48,
         }
     }

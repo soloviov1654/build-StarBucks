@@ -791,6 +791,11 @@ button.accept {
     display: none;
   }
 }
+@media screen and (max-width: 1560px) {
+  .products .caroucell-wrapper .swiper {
+    max-width: 927px;
+  }
+}
 @media screen and (max-width: 1024.99px) {
   header {
     padding: 34px 0;
