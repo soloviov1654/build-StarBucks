@@ -658,16 +658,37 @@ button.accept {
 }
 .products .caroucell-wrapper {
   position: relative;
+  margin: auto;
 }
-.products .caroucell-wrapper .swiper {
+
+.swiper {
   max-width: 1252px;
   margin: 0 auto;
 }
-.products .caroucell-wrapper .swiper-button-prev {
-  left: -120px;
+
+.swiper-navigation {
+  height: 0;
+  width: 100%;
+  max-width: 1492px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.products .caroucell-wrapper .swiper-button-next {
-  right: -120px;
+
+.swiper-button-prev.btn-outline, .swiper-button-next.btn-outline {
+  transform: rotate(90deg);
+  position: static;
+}
+.swiper-button-prev.btn-outline::after, .swiper-button-next.btn-outline::after {
+  content: "";
+}
+
+.swiper-button-prev.btn-outline {
+  transform: rotate(-90deg);
 }
 
 .footer {
@@ -794,6 +815,36 @@ button.accept {
 @media screen and (max-width: 1560px) {
   .products .caroucell-wrapper .swiper {
     max-width: 927px;
+  }
+  .swiper-navigation {
+    max-width: 1167px;
+  }
+}
+@media screen and (max-width: 1233.99px) {
+  .products .caroucell-wrapper .swiper {
+    max-width: 602px;
+  }
+  .swiper-navigation {
+    max-width: 841px;
+  }
+}
+@media screen and (max-width: 1026px) {
+  .products .caroucell-wrapper .swiper {
+    max-width: 578px;
+  }
+  .products .container .caroucell-wrapper .swiper-button-next {
+    right: 55px;
+  }
+  .products .container .caroucell-wrapper .swiper-button-prev {
+    right: -55px;
+  }
+}
+@media screen and (max-width: 907px) {
+  .products .caroucell-wrapper .swiper {
+    max-width: 277px;
+  }
+  .swiper-navigation {
+    max-width: 516px;
   }
 }
 @media screen and (max-width: 1024.99px) {
@@ -1196,17 +1247,6 @@ img {
 }
 .btn.btn-secondary:hover::after {
   animation: 0.3s btn-secondary 1;
-}
-
-.swiper-button-prev.btn-outline, .swiper-button-next.btn-outline {
-  transform: rotate(90deg);
-}
-.swiper-button-prev.btn-outline::after, .swiper-button-next.btn-outline::after {
-  content: "";
-}
-
-.swiper-button-prev.btn-outline {
-  transform: rotate(-90deg);
 }
 
 .svg-sprite {
