@@ -681,7 +681,8 @@ button.accept {
 
 .swiper-button-prev.btn-outline, .swiper-button-next.btn-outline {
   transform: rotate(90deg);
-  position: static;
+  position: absolute;
+  right: -9%;
 }
 .swiper-button-prev.btn-outline::after, .swiper-button-next.btn-outline::after {
   content: "";
@@ -689,6 +690,97 @@ button.accept {
 
 .swiper-button-prev.btn-outline {
   transform: rotate(-90deg);
+  left: -9%;
+}
+
+.events > .container {
+  margin-bottom: 100px;
+}
+
+.events-title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 54px;
+  flex-direction: row-reverse;
+}
+.events-title-wrapper .template-title {
+  margin-right: 0;
+  margin-left: var(--margin);
+}
+
+.banner-description {
+  max-width: 457px;
+  margin-top: 23px;
+}
+
+h1 {
+  max-width: 375px;
+  margin-left: 72px;
+}
+
+h3 {
+  font-weight: 500;
+  line-height: 109%;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: rgba(0, 255, 255, 0.2509803922);
+  padding: 44px 26px 26px;
+  border-radius: 30px;
+  height: 260px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.event-title {
+  line-height: 1;
+}
+
+.event-1 {
+  grid-area: 1/1/4/7;
+}
+.event-1 h3 {
+  max-width: 230px;
+}
+
+.event-2 {
+  grid-area: 1/7/4/13;
+}
+.event-2 h3 {
+  max-width: 168px;
+}
+
+.event-3 {
+  grid-area: 4/1/7/5;
+}
+.event-3 h3 {
+  max-width: 241px;
+}
+
+.event-4 {
+  grid-area: 4/5/7/9;
+}
+.event-4 h3 {
+  max-width: 222px;
+}
+
+.event-5 {
+  grid-area: 4/9/7/13;
+}
+.event-5 h3 {
+  max-width: 294px;
 }
 
 .footer {
@@ -819,6 +911,12 @@ button.accept {
   .swiper-navigation {
     max-width: 1167px;
   }
+  .products .container .caroucell-wrapper .swiper-button-next {
+    right: 0%;
+  }
+  .products .container .caroucell-wrapper .swiper-button-prev {
+    left: 0%;
+  }
 }
 @media screen and (max-width: 1233.99px) {
   .products .caroucell-wrapper .swiper {
@@ -833,10 +931,10 @@ button.accept {
     max-width: 578px;
   }
   .products .container .caroucell-wrapper .swiper-button-next {
-    right: 55px;
+    right: 2%;
   }
   .products .container .caroucell-wrapper .swiper-button-prev {
-    right: -55px;
+    left: 2%;
   }
 }
 @media screen and (max-width: 907px) {
