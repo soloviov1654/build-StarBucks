@@ -661,7 +661,7 @@ button.accept {
   margin: auto;
 }
 
-.swiper {
+.swiper-prod {
   max-width: 1252px;
   margin: 0 auto;
 }
@@ -679,16 +679,17 @@ button.accept {
   transform: translate(-50%, -50%);
 }
 
-.swiper-button-prev.btn-outline, .swiper-button-next.btn-outline {
+.swiper-products-button-prev.btn-outline, .swiper-products-button-next.btn-outline {
+  cursor: pointer;
   transform: rotate(90deg);
   position: absolute;
   right: -9%;
 }
-.swiper-button-prev.btn-outline::after, .swiper-button-next.btn-outline::after {
+.swiper-products-button-prev.btn-outline::after, .swiper-products-button-next.btn-outline::after {
   content: "";
 }
 
-.swiper-button-prev.btn-outline {
+.swiper-products-button-prev.btn-outline {
   transform: rotate(-90deg);
   left: -9%;
 }
@@ -781,6 +782,26 @@ h3 {
 }
 .event-5 h3 {
   max-width: 294px;
+}
+
+.swiper-events-button-next,
+.swiper-events-button-prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+.swiper-events-button-next {
+  transform: rotate(90deg);
+}
+
+.swiper-events-button-prev {
+  transform: rotate(-90deg);
+}
+
+.btns-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {
@@ -905,21 +926,21 @@ h3 {
   }
 }
 @media screen and (max-width: 1560px) {
-  .products .caroucell-wrapper .swiper {
+  .products .caroucell-wrapper .swiper-prod {
     max-width: 927px;
   }
   .swiper-navigation {
     max-width: 1167px;
   }
-  .products .container .caroucell-wrapper .swiper-button-next {
+  .products .container .caroucell-wrapper .swiper-products-button-next {
     right: 0%;
   }
-  .products .container .caroucell-wrapper .swiper-button-prev {
+  .products .container .caroucell-wrapper .swiper-products-button-prev {
     left: 0%;
   }
 }
 @media screen and (max-width: 1233.99px) {
-  .products .caroucell-wrapper .swiper {
+  .products .caroucell-wrapper .swiper-prod {
     max-width: 602px;
   }
   .swiper-navigation {
@@ -927,18 +948,18 @@ h3 {
   }
 }
 @media screen and (max-width: 1026px) {
-  .products .caroucell-wrapper .swiper {
+  .products .caroucell-wrapper .swiper-prod {
     max-width: 578px;
   }
-  .products .container .caroucell-wrapper .swiper-button-next {
+  .products .container .caroucell-wrapper .swiper-products-button-next {
     right: 2%;
   }
-  .products .container .caroucell-wrapper .swiper-button-prev {
+  .products .container .caroucell-wrapper .swiper-products-button-prev {
     left: 2%;
   }
 }
 @media screen and (max-width: 907px) {
-  .products .caroucell-wrapper .swiper {
+  .products .caroucell-wrapper .swiper-prod {
     max-width: 277px;
   }
   .swiper-navigation {
