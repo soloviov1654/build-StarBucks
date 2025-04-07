@@ -79,6 +79,206 @@ Use it to make something cool, have fun, and share what you've learned with othe
   font-style: normal;
   font-display: swap;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat";
+  font-size: 16px;
+  background-color: #121517;
+  color: #d9d9d9;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, .banner-description {
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 3.875rem;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+h4 {
+  font-size: 1.625rem;
+  line-height: 1.23;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 1.46;
+}
+
+h6, .banner-description {
+  font-size: 1.25rem;
+  line-height: 1.63;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.ff-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1274px;
+  padding: 0 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*&.btn-primary {
+        font-weight: 600;
+        background-image: linear-gradient(210deg, #237249 0%, #35c66b 100%);*/
+.btn {
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  padding: 23px 54px;
+  background: transparent;
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  height: 0;
+  width: 0;
+  background-color: rgba(255, 255, 255, 0.4196078431);
+  transform: skew(-25deg, 0);
+  transition: 0.3s;
+}
+.btn:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+.btn.btn-primary {
+  font-weight: 600;
+  background-image: linear-gradient(210deg, #237249 0%, #35c66b 100%);
+}
+.btn.btn-outline {
+  width: 84px;
+  height: 84px;
+  border: 1px solid #237249;
+  border-radius: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.btn.btn-outline svg {
+  height: 37px;
+}
+.btn.btn-secondary {
+  position: relative;
+  background-color: #121517;
+}
+.btn.btn-secondary::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background-image: linear-gradient(140deg, #BBB3B3 0%, #121517 100%);
+  z-index: -1;
+  border-radius: 40px;
+}
+.btn.btn-secondary:hover::after {
+  animation: 0.3s btn-secondary 1;
+}
+
+.svg-sprite {
+  height: 0;
+}
+
+.gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(210deg, #237249 0%, #35c66b 100%);
+}
+
+::selection {
+  color: #121517;
+  background-color: #237249;
+}
+
 header {
   padding: 48px 0;
   position: relative;
@@ -1182,204 +1382,5 @@ h3 {
   .player-elements {
     margin: 0 auto;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Montserrat";
-  font-size: 16px;
-  background-color: #121517;
-  color: #d9d9d9;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-h1, h2, h3, h4, h5, h6, .banner-description {
-  color: #fff;
-}
-
-ul {
-  list-style-type: none;
-}
-
-h1 {
-  font-size: 5rem;
-  line-height: 1.1;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: 3.875rem;
-  line-height: 1.1;
-}
-
-h3 {
-  font-size: 2rem;
-  line-height: 2;
-}
-
-h4 {
-  font-size: 1.625rem;
-  line-height: 1.23;
-}
-
-h5 {
-  font-size: 1.5rem;
-  line-height: 1.46;
-}
-
-h6, .banner-description {
-  font-size: 1.25rem;
-  line-height: 1.63;
-}
-
-.fw-100 {
-  font-weight: 100;
-}
-
-.fw-200 {
-  font-weight: 200;
-}
-
-.fw-300 {
-  font-weight: 300;
-}
-
-.fw-400 {
-  font-weight: 400;
-}
-
-.fw-500 {
-  font-weight: 500;
-}
-
-.fw-600 {
-  font-weight: 600;
-}
-
-.fw-700 {
-  font-weight: 700;
-}
-
-.fw-800 {
-  font-weight: 800;
-}
-
-.fw-900 {
-  font-weight: 900;
-}
-
-.ff-montserrat {
-  font-family: "Montserrat", sans-serif;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.d-none {
-  display: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.container {
-  max-width: 1274px;
-  padding: 0 12px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*&.btn-primary {
-        font-weight: 600;
-        background-image: linear-gradient(210deg, #237249 0%, #35c66b 100%);*/
-.btn {
-  color: #fff;
-  font-size: 24px;
-  border-radius: 50px;
-  border: none;
-  text-decoration: none;
-  padding: 23px 54px;
-  background: transparent;
-  text-align: center;
-  transition: 0.3s;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-.btn:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -15px;
-  height: 0;
-  width: 0;
-  background-color: rgba(255, 255, 255, 0.4196078431);
-  transform: skew(-25deg, 0);
-  transition: 0.3s;
-}
-.btn:hover {
-  color: #fff;
-  opacity: 0.9;
-}
-.btn.btn-primary {
-  font-weight: 600;
-  background-image: linear-gradient(210deg, #237249 0%, #35c66b 100%);
-}
-.btn.btn-outline {
-  width: 84px;
-  height: 84px;
-  border: 1px solid #237249;
-  border-radius: 29px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-}
-.btn.btn-outline svg {
-  height: 37px;
-}
-.btn.btn-secondary {
-  position: relative;
-  background-color: #121517;
-}
-.btn.btn-secondary::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background-image: linear-gradient(140deg, #BBB3B3 0%, #121517 100%);
-  z-index: -1;
-  border-radius: 40px;
-}
-.btn.btn-secondary:hover::after {
-  animation: 0.3s btn-secondary 1;
-}
-
-.svg-sprite {
-  height: 0;
-}
-
-.gradient {
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(210deg, #237249 0%, #35c66b 100%);
-}
-
-::selection {
-  color: #121517;
-  background-color: #237249;
 }
 /*# sourceMappingURL=style.css.map */
