@@ -988,15 +988,26 @@ h3 {
 .swiper-events-button-prev {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: -170px;
+  transform: rotate(90deg);
+}
+
+.events .container .btns-wrapper div {
+  width: 53px;
+  height: 53px;
+  border-radius: 18px;
+}
+.events .container .btns-wrapper div svg {
+  height: 25px;
 }
 
 .swiper-events-button-next {
-  transform: rotate(90deg);
+  right: 1%;
 }
 
 .swiper-events-button-prev {
   transform: rotate(-90deg);
+  left: 1%;
 }
 
 .btns-wrapper {
@@ -1313,8 +1324,12 @@ h3 {
   .btns-wrapper {
     display: flex;
   }
-  .events .events-wrapper .swiper-events {
-    max-width: 614px;
+  .events .events-wrapper {
+    margin: 0 auto;
+    max-width: 530px;
+  }
+  .events .events-wrapper .swiper-wrapper {
+    width: 100%;
   }
 }
 @media screen and (max-width: 767.99px) {
