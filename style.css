@@ -1002,6 +1002,11 @@ h3 {
 .btns-wrapper {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+.btns-wrapper {
+  display: none;
 }
 
 .footer {
@@ -1301,6 +1306,15 @@ h3 {
   }
   .content-side {
     margin-left: 23px;
+  }
+  .events-grid {
+    display: flex;
+  }
+  .btns-wrapper {
+    display: flex;
+  }
+  .events .events-wrapper .swiper-events {
+    max-width: 614px;
   }
 }
 @media screen and (max-width: 767.99px) {
