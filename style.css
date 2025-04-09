@@ -465,6 +465,10 @@ header .btn-burger {
   z-index: 1;
 }
 
+.first-banner .container .cup-discount {
+  transform: rotate(-20deg);
+}
+
 .advantages > .container {
   display: flex;
   justify-content: center;
@@ -1479,6 +1483,14 @@ button.accept {
   }
 }
 @media screen and (max-width: 575.99px) {
+  .first-banner .container .banner-line {
+    width: 124%;
+    top: -116px;
+    right: -36px;
+  }
+  .first-banner .container .btn-primary {
+    padding: 12px 30px;
+  }
   .we-make .container {
     margin-bottom: 0;
   }
@@ -1515,11 +1527,11 @@ button.accept {
   .we-make .img-side .img-wrapper img {
     max-width: 160px;
   }
-  .we-make .we-make__line {
-    top: -168px;
-    left: -240px;
-    width: 700px;
-    height: 700px;
+  .we-make .container .we-make__line {
+    top: -46px;
+    left: -84px;
+    width: 500px;
+    height: 500px;
   }
   .we-make .content-side {
     margin-left: 0;
