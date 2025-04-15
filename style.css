@@ -1335,8 +1335,12 @@ button.accept {
     gap: 30px;
     margin-left: 12%;
   }
+  .products .container .banner-description {
+    margin-bottom: 0;
+  }
   .events .container .banner-description {
     max-width: 476px;
+    margin: 0;
   }
   .events .container h1 {
     margin-left: 0;
